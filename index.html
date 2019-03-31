@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>Hackathon</title>
-    <!-- <link rel="stylesheet" type="text/css" href="index.css"> -->
+    <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" type="text/css" href="bootstrap-3.4.1/css/bootstrap.min.css"/>
     <script src="jquery-3.3.1.min.js"></script>
     <script src="bootstrap-3.4.1/js/bootstrap.min.js"></script>
@@ -48,7 +48,7 @@
       </div>
       <hr />
 
-      <div class="medium-contnts container">
+      <div class="medium-contnts container-fluid">
 
         <div class="row">
 
@@ -56,7 +56,7 @@
             <div class="serch-contents-area">
               <form>
                 <div class="form-group">
-                  <div style="width: 40%" class="input-group">
+                  <div class="input-group">
                     <input type="text" name="input-serch" class="form-control" placeholder="検索">
                     <span class="input-group-btn">
                         <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span> 検索</button>
@@ -71,21 +71,22 @@
           </div>
 
           <div class="m-right-contents col-xs-6">
-            <div class="well">aaaaaaaaaaaaa</div>
+            <div id="editor">
+              <div style="height: 80vh" class="well">
+
+              </div>
+            </div>
+            <div class="button-area pull-right">
+              <button type="button" name="copy-text-button" class="btn btn-primary" value="">
+                Copy text
+              </button>
+      
+              <button type="button" name="login-button" class="btn btn-primary" value="aaa">
+                Gmail
+              </button>
+            </div>
           </div>
-
         </div>
-
-      </div>
-
-      <div class="button-area">
-
-        <button type="button" name="login-button" value="aaa">
-        </button>
-
-        <button type="button" name="login-button" value="aaa">
-        </button>
-
       </div>
 
       <footer class="footer">
