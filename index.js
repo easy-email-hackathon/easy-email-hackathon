@@ -57,3 +57,15 @@ function getJSON() {
 // Gmailで開く用
 function openGmail() {
 }
+
+
+$(function(){
+  //json読み込みDOM生成
+  $.getJSON("templates.json", function (data) {
+    var sentens = data[0].sentences;
+    console.log(sentens);
+
+    //$('.select-contents-area').append(')
+  });
+});
+
