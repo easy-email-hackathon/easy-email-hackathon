@@ -4,7 +4,10 @@
   <head>
     <meta charset="utf-8">
     <title>Hackathon</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <!-- <link rel="stylesheet" type="text/css" href="index.css"> -->
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.4.1/css/bootstrap.min.css"/>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="bootstrap-3.4.1/js/bootstrap.min.js"></script>
   </head>
 
   <body>
@@ -12,26 +15,38 @@
     <div class="main-contents">
 
       <header class="header">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="rogo-img col-xs-8">
+              <img src="logo.jpg">
+            </div>
 
-        <div class="rogo-img">
+            <div class="col-xs-4">
+              <button type="button" name="login-button" class="btn btn-primary pull-right" value="">ログイン</button>
+            </div>
+          </div>
         </div>
-
-        <button type="button" name="login-button" value="aaa">
-        </button>
 
       </header>
 
-      <div class="top-contents">
-
         <div class="input-area">
-          <input type="text" name="input-name" size="40">
-          <input type="text" name="company-name" size="40">
+          <ul>
+            <li class="list-unstyled form-group">
+              <label for="input-name">お名前</label>
+              <input style="width:200px" type="text" name="input-name" class="form-control" placeholder="田中　太郎">
+            </li>
+            <li class="list-unstyled form-group">
+              <label for="company-name">会社名</label>
+              <input style="width:200px" type="text" name="company-name" class="form-control" placeholder="株式会社ほげ">
+            </li>
+          </ul>
         </div>
 
         <div class="alert-area">
         </div>
 
       </div>
+      <hr />
 
       <div class="medium-contnts">
 
