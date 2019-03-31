@@ -60,12 +60,12 @@ function openGmail() {
 
 
 $(function(){
-  //json読み込みDOM生成
-  $.getJSON("templates.json", function (data) {
-    var sentens = data[0].sentences;
-    console.log(sentens);
+  var contents1 = ["いつもお世話になっております。\n @comの@nameです。","日頃より大変お世話になっております。\n @comの@nameです。","平素よりお世話になっております。\n @comの@nameです。","平素より格別のお引き立てを、ありがとうございます。","毎度お引き立てをいただき、ありがとうございます。"];
 
-    //$('.select-contents-area').append(')
+  $(function(){
+    for(var i = 0; i < contents1.length; i++){
+      $('.select-contents-area').append('<div class="select-contents"><div class="title-area">' + contents1[i] + '</div><div class="sub-area">aaaaaaaaaaaaaaa</div></div>');
+    };
   });
 });
 
