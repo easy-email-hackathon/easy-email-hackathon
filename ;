@@ -11,16 +11,24 @@ $(function() {
   })
 
   // 定型文のブロッククリック時の処理(エディタ欄下部に追加), typeで分ける？
-  $(document).on("click",".content",function(){
+  $('.templateBlock').on('click', () => {
 
-    const content = $(this).find('.templateBlock.content').val();
+    const me = $(this) // hiddenとかで素のテキスト持ってる前提
+    const content = me.find('.content').val()
 
-   // const templateElement = '<div class="template-closing"><div class="well">' + content + '</div><div><button type="button" class="freeform-add-button" /></div></div>`;
+    const templateElement = `
+    <div class="template-closing">
+      <div class="well">
+      ${content}
+      </div>
+      <div>
+        <button type="button" class="freeform-add-button" />
+      </div>
+    </div>
+    `
 
-    $('.well').append('<div class="template-closing"><div class="well">' + content + '</div><div><button type="button" class="freeform-add-button" /></div></div>');
-
-  });
-
+    $('#editor').append(templateElement) // エディタ部分のIDをeditorに仮置き, editor下部に要素追加
+  })
 
   // Copyボタン押下時クリップボードにコピー
   $('#copy-button').on('click', () => {
@@ -61,7 +69,7 @@ $(function() {
   var contents1 = ["いつもお世話になっております。\n @comの@nameです。","日頃より大変お世話になっております。\n @comの@nameです。","平素よりお世話になっております。\n @comの@nameです。","平素より格別のお引き立てを、ありがとうございます。","毎度お引き立てをいただき、ありがとうございます。"];
 
     for(var i = 0; i < contents1.length; i++){
-      $('.select-contents-area').append('<div class="templateBlock"><div class="content" value="' + contents1[i] + '">' + contents1[i] + '</div><div class="sub-area">aaaaaaaaaaaaaaa</div></div>');
+      $('.select-contents-area').append('<div class="templateBlock"><div class="content">' + contents1[i] + '</div><div class="sub-area">aaaaaaaaaaaaaaa</div></div>');
     };
   });
 
